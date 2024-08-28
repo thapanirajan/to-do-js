@@ -24,16 +24,6 @@ function addTodo() {
     console.log(todoInput);
     todoList.appendChild(li);
 
-    // Create and append a "Delete" button to the list item
-    const delButton = document.createElement("button");
-    delButton.textContent = "Delete";
-    delButton.className = "delete-btn";
-    delButton.addEventListener("click", deleteTodo);
-    li.appendChild(delButton);
-
-    // Add an event listener to the list item to toggle the completed state when clicked
-    li.addEventListener("click", toogleComplete);
-
     // Get the current date and format it as YYYY-MM-DD
     const now = new Date();
     const year = now.getFullYear();
@@ -45,6 +35,16 @@ function addTodo() {
     const date = ` ${year}-${month}-${day}`;
     span.textContent = date;
     li.appendChild(span);
+
+    // Create and append a "Delete" button to the list item
+    const delButton = document.createElement("button");
+    delButton.textContent = "Delete";
+    delButton.className = "delete-btn";
+    delButton.addEventListener("click", deleteTodo);
+    li.appendChild(delButton);
+
+    // Add an event listener to the list item to toggle the completed state when clicked
+    li.addEventListener("click", toogleComplete);
 
     // Clear the input field after adding the task
     textfield.value = "";
