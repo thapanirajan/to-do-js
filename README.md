@@ -25,3 +25,5 @@ This is a simple JavaScript-based to-do list application that allows users to ad
 
 ### Marking a Task as Completed
 - Click on the task text to mark it as completed. The task will have the class completed added to it, which you can style with CSS.
+
+#### Status: incomplete
